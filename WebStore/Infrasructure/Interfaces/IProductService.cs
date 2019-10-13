@@ -30,5 +30,9 @@ namespace WebStore.Infrasructure.Interfaces
         /// <param name="id"></param>
         /// <returns></returns>
         Product GetProductById(int id);
+
+        void Delete(int id);
+
+        void AddNew(Product product);
     }
 }

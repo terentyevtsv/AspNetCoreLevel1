@@ -437,5 +437,15 @@ namespace WebStore.Infrasructure.Services
                 .SingleOrDefault(p => p.Id == id);
             return product;
         }
+
+        public void Delete(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void AddNew(Product product)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

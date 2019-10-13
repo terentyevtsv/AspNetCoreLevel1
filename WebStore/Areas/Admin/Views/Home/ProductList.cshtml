@@ -66,6 +66,12 @@
             <td>
                 @Html.DisplayFor(modelItem => productItem.Price)
             </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {id=productItem.Id }) |
+                @Html.ActionLink("Details", "Details", new {id=productItem.Id }) |
+                @Html.ActionLink("Delete", "Delete", new {id=productItem.Id })
+            </td>
         </tr>
     }
     </tbody>

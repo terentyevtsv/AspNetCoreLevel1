@@ -63,5 +63,21 @@ namespace WebStore.Infrasructure.Services
                 .SingleOrDefault(p => p.Id == id);
             return product;
         }
+
+        public void Delete(int id)
+        {
+            var product = _webStoreContext.Products
+                .SingleOrDefault(p => p.Id == id);
+            if (product != null)
+                _webStoreContext.Products.Remove(product);
+
+            _webStoreContext.SaveChanges();
+        }
+
+        public void AddNew(Product product)
+        {
+            _webStoreContext.Products.Add(product);
+            _webStoreContext.SaveChanges();
+        }
     }
 }
